@@ -1,12 +1,17 @@
-import usercontextprovider from './Context/Usercontextprovider'
+
 import './App.css'
+import Usercontextprovider from './Context/Usercontextprovider'
+import Login from './Components/Login'
+import Profile from './Components/Profile'
 
 function App() {
   
   return (
-    <usercontextprovider>
+    <Usercontextprovider>
     <h1>DO WHAT YOU LOVE</h1>
-    </usercontextprovider>
+    <Login/>
+    <Profile />
+    </Usercontextprovider>
   )
 }
 
