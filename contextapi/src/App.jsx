@@ -8,7 +8,7 @@ function App() {
   
   return (
     <Usercontextprovider>
-    <h1>DO WHAT YOU LOVE</h1>
+    <h1>Everyone has there own journey dont judge them by the knowledge you have and except they also know</h1>
     <Login/>
     <Profile />
     </Usercontextprovider>

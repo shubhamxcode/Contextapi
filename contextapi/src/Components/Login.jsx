@@ -16,11 +16,13 @@ function Login() {
         <h2>Login</h2>
         <input type="text" placeholder='username'
         value={username} 
+       required
         onChange={(e)=> setusername(e.target.value)}
         />{" "}
         <input type="text" placeholder='password' 
         value={password}
-        onChange={(e)=>setpassword(e.target.value)}/>
+        onChange={(e)=>setpassword(e.target.value)}
+        />
         <button onClick={handlesumbit}>Submit</button>
     </div>
   )
