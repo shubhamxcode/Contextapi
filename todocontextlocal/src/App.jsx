@@ -17,6 +17,15 @@ function App() {
   const ToggleTodo=(id)=>{
     settodos((prev)=>prev.map((prevtodo)=>prevtodo===id ? {...prevtodo,compleated:!prevtodo.compleated}:prevtodo))
   }
+
+  useEffect(() => {
+    const todos=JSON.parse(localStorage.getItem("todos"))
+    if (todos && todos.length>0) {
+      settodos(todos)
+    }
+
+  }, [])
+  
   return (
     <Todoprovider value={{todos,addTodo,deleteTodo,updateTodo,ToggleTodo}}>
    <div className="bg-[#172842] min-h-screen py-8">
