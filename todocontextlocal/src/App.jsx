@@ -11,6 +11,12 @@ function App() {
   const updateTodo=(id,todo)=>{
     settodos((prev)=>prev.map((prevtodo)=> prevtodo.id===id?todo:prevtodo))
   }
+  const deleteTodo=(id)=>{
+    settodos((prev) => prev.filter((prevtodo)=> prevtodo.id !== id) )
+  }
+  const ToggleTodo=(id)=>{
+    settodos((prev)=>prev.map((prevtodo)=>prevtodo===id ? {...prevtodo,compleated:!prevtodo.compleated}:prevtodo))
+  }
   return (
     <Todoprovider value={{todos,addTodo,deleteTodo,updateTodo,ToggleTodo}}>
    <div className="bg-[#172842] min-h-screen py-8">
